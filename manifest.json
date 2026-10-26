@@ -1,0 +1,21 @@
+{
+    "manifest_version": 3,
+    "name": "Weather Update Helper",
+    "version": "1.0",
+    "description": "Extension para la actualizacion del clima dentro de aplicaciones",
+    "permissions": ["storage"],
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["content.js"],
+            "all_frames": true
+        }
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "action": {
+        "default_popup": "popup.html",
+        "default_title": "Weather Update Helper"
+    }
+}
